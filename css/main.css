@@ -375,7 +375,7 @@
 	padding-bottom: 12rem;
 }
 #portfolio .folio-item {
-	padding: 0;
+	padding: 10;
 	position: relative;
 	overflow: hidden;
 	height: 300px;
