@@ -18,6 +18,20 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
 
+    <!-- Component CSS Files -->
+    <link href="css/components/navbar.css" rel="stylesheet">
+    <link href="css/components/hero.css" rel="stylesheet">
+    <link href="css/components/sections.css" rel="stylesheet">
+    <link href="css/components/about.css" rel="stylesheet">
+    <link href="css/components/skills.css" rel="stylesheet">
+    <link href="css/components/experience.css" rel="stylesheet">
+    <link href="css/components/portfolio.css" rel="stylesheet">
+    <link href="css/components/education.css" rel="stylesheet">
+    <link href="css/components/contact.css" rel="stylesheet">
+    <link href="css/components/footer.css" rel="stylesheet">
+    <link href="css/components/responsive.css" rel="stylesheet">
+
+    <!-- CSS Variables & Base Styles -->
     <style>
         :root {
             --primary-color: #007bff;
@@ -42,454 +56,46 @@
             font-family: 'Saira', sans-serif;
             font-weight: 700;
         }
-
-        /* Navigation */
-        nav {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        nav .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white !important;
-        }
-
-        nav .nav-link {
-            color: rgba(255, 255, 255, 0.9) !important;
-            margin-left: 1.5rem;
-            transition: 0.3s ease;
-        }
-
-        nav .nav-link:hover {
-            color: white !important;
-            border-bottom: 2px solid white;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero .title {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .hero .social-links {
-            margin-top: 2rem;
-        }
-
-        .hero .social-links a {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: white;
-            margin: 0 10px;
-            transition: 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .hero .social-links a:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: translateY(-5px);
-        }
-
-        /* Resume Button */
-        .resume-btn {
-            display: inline-block;
-            background: white;
-            color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 10px;
-            transition: 0.3s ease;
-            border: 2px solid white;
-        }
-
-        .resume-btn:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero .resume-btn {
-            color: var(--primary-color);
-            background: white;
-        }
-
-        .hero .resume-btn:hover {
-            background: transparent;
-            color: white;
-            border-color: white;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        section h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 15px auto 0;
-        }
-
-        /* About Section */
-        #about {
-            background: var(--light-color);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-            line-height: 1.8;
-        }
-
-        /* Profile Info */
-        .profile-info {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .profile-info-item {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--light-color);
-        }
-
-        .profile-info-item:last-child {
-            border-bottom: none;
-        }
-
-        .profile-info-item strong {
-            display: block;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        /* Skills Section */
-        #skills {
-            background: white;
-        }
-
-        .skill-card {
-            background: var(--light-color);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            transition: 0.3s ease;
-        }
-
-        .skill-card:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .skill-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: white;
-            color: var(--primary-color);
-            padding: 8px 15px;
-            border-radius: 20px;
-            border: 2px solid var(--primary-color);
-            font-size: 0.9rem;
-            transition: 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* Experience Section */
-        #experience {
-            background: var(--light-color);
-        }
-
-        .experience-item {
-            background: white;
-            padding: 30px;
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 30px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .experience-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .experience-item .company {
-            font-weight: 600;
-            color: var(--dark-color);
-            margin-bottom: 5px;
-        }
-
-        .experience-item .date {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .experience-item ul {
-            margin-left: 20px;
-        }
-
-        .experience-item li {
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-            line-height: 1.7;
-        }
-
-        /* Portfolio Section */
-        #portfolio {
-            background: white;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .portfolio-card {
-            background: var(--light-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: 0.3s ease;
-            cursor: pointer;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        .portfolio-card-content {
-            padding: 25px;
-        }
-
-        .portfolio-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .portfolio-card .role {
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-card p {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .portfolio-card .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .portfolio-card .tech {
-            background: white;
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            border: 1px solid var(--primary-color);
-        }
-
-        .portfolio-card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
-
-        .portfolio-card a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        /* Education Section */
-        #education {
-            background: var(--light-color);
-        }
-
-        .education-item {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .education-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .education-item .degree {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .education-item .date {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
-            color: white;
-            text-align: center;
-        }
-
-        #contact h2 {
-            color: white;
-        }
-
-        #contact h2::after {
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .contact-item {
-            margin: 30px 0;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .title {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            section h2 {
-                font-size: 2rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav .nav-link {
-                margin-left: 0;
-                padding: 10px 0;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#top">Jay Dwivedi</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Redesigned Side / Top Navigation -->
+    <nav id="sideNav" class="side-nav" aria-label="Primary navigation">
+        <div class="side-inner">
+            <a class="brand" href="#top">
+                <img class="img-profile" src="img/profile.png" alt="Jay Kishor Dwivedi">
+                <div class="brand-text">
+                    <span class="name">Jay Dwivedi</span>
+                    <span class="title">Mobile Architect</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="sideNavList" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+
+            <ul id="sideNavList" class="nav-list" role="menu">
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#about"><i class="fa fa-user"></i><span class="nav-label">About</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#experience"><i class="fa fa-briefcase"></i><span class="nav-label">Experience</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#profilesummary"><i class="fa fa-list"></i><span class="nav-label">Profile Summary</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#education"><i class="fa fa-graduation-cap"></i><span class="nav-label">Education</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#skills"><i class="fa fa-code"></i><span class="nav-label">Skills</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#portfolio"><i class="fa fa-th-large"></i><span class="nav-label">Portfolio</span></a></li>
+                <li class="nav-item" role="none"><a class="nav-link js-scroll-trigger" role="menuitem" href="#contact"><i class="fa fa-envelope"></i><span class="nav-label">Contact</span></a></li>
+            </ul>
+
+            <!-- Collapse / Expand handle -->
+            <button class="side-collapse-btn" aria-label="Collapse navigation" title="Collapse navigation">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="side-footer">
+                <div class="socials">
+                    <a href="https://linkedin.com/in/jaydwivedi" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/jaydwivedi" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                </div>
+                <a class="cta-btn" href="mailto:jaidwivedi20@gmail.com">Hire Me</a>
             </div>
         </div>
     </nav>
@@ -499,8 +105,12 @@
         <div class="container">
             <h1>Jay Kishor Dwivedi</h1>
             <p class="title">Mobile Architect | Lead Android Developer</p>
+           <p class="title">
+                <a href="tel:+918600227438" class="hero-contact-item"><i class="fa fa-phone"></i> +91 8600227438</a>
+                <a href="mailto:jaidwivedi20@gmail.com" class="hero-contact-item"><i class="fa fa-envelope"></i> jaidwivedi20@gmail.com</a>
+          </p>  
             <div class="social-links">
-                <a href="https://linkedin.com/in/jaydwivedi" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/jay-dwivedi-28369834/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                 <a href="https://github.com/jaydwivedi" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
                 <a href="mailto:jaidwivedi20@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
             </div>
@@ -516,35 +126,18 @@
         <div class="container">
             <h2>Let me introduce myself</h2>
             <div class="about-content">
-                <div>
-                    <p>Mobile Architect and Lead Android Developer with 11+ years of experience delivering enterprise-grade mobile ecosystems across HR, finance, telecom, and productivity domains.</p>
-                    <p>Expert in Kotlin, Jetpack Compose, and cross-platform strategy (React Native, Flutter). Known for modernizing large-scale apps, designing clean architectures, leading distributed teams, and driving AI-assisted development with automation-first engineering practices.</p>
-                    <p>Strong record in shipping robust, scalable, and secure mobile solutions with CI/CD, cloud integrations, and cross-functional collaboration.</p>
-                </div>
-                <div class="profile-info">
-                    <div class="profile-info-item">
-                        <strong>Full Name</strong>
-                        Jay Kishor Dwivedi
-                    </div>
-                    <div class="profile-info-item">
-                        <strong>Current Position</strong>
-                        Sr. Technical Lead / Mobile Architect at Coforge Limited
-                    </div>
-                    <div class="profile-info-item">
-                        <strong>Location</strong>
-                        Hyderabad, India
-                    </div>
-                    <div class="profile-info-item">
-                        <strong>Email</strong>
-                        jaidwivedi20@gmail.com
-                    </div>
-                    <div class="profile-info-item">
-                        <strong>Phone</strong>
-                        +91 8600227438
-                    </div>
-                    <div class="profile-info-item" style="border-bottom: none; margin-top: 25px; text-align: center;">
-                        <a href="Jay_Kishor_Dwivedi_Resume.pdf" class="resume-btn" download style="display: block; margin: 10px 0;"><i class="fa fa-download"></i> Download Resume</a>
-                    </div>
+             
+                
+                              <!-- Contact info removed from about card -->
+                        <div class="about-desc">
+                            <p>
+                                With 12+ years of experience, I craft scalable, high-performance mobile solutions for global enterprises. My expertise spans native Android/iOS, cross-platform (Flutter, React Native, Xamarin), and backend integration. I thrive on solving complex business challenges with elegant, user-centric apps.
+                            </p>
+                            <p>
+                                I love mentoring teams, architecting robust systems, and staying ahead with the latest tech trends. Let's build something amazing together!
+                            </p>
+                      
+                   
                 </div>
             </div>
         </div>
@@ -887,34 +480,47 @@
     <section id="portfolio">
         <div class="container">
             <h2>My Portfolio Projects</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+            </div>
             <div class="portfolio-grid">
                
 
                 <div class="portfolio-card">
                     <div class="portfolio-card-content">
-                        <h3>HCM (Zenefits)</h3>
+                        <h3>TriNet HR Platform App</h3>
                         <p class="role">Technical Lead</p>
-                        <p>Large-scale HR app modernization using Compose, modularization, and backend push notification redesign using Python.</p>
+                        <p>Large-scale HR app modernization using Kotlin Jetpack Compose, modularization, and backend push notification redesign using Python.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Kotlin</span>
-                            <span class="tech">Compose</span>
+                            <span class="tech">Jetpack Compose</span>
                             <span class="tech">Python</span>
                             <span class="tech">FCM</span>
+                            <span class="tech">Modular Architecture</span>
                         </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.zenefits.android.apps.people&pcampaignid=web_share" target="_blank">View on Play Store →</a>
                     </div>
                 </div>
 
                 <div class="portfolio-card">
                     <div class="portfolio-card-content">
-                        <h3>TriNet HR App</h3>
+                        <h3>TriNet App</h3>
                         <p class="role">Lead Developer</p>
-                        <p>Cross-platform HR solution with reusable React Native components and improved backend integration.</p>
+                        <p>Cross-platform HR solution using React Native with reusable components, improved build speed by 40%, and enhanced backend integration.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">React Native</span>
                             <span class="tech">TypeScript</span>
                             <span class="tech">Expo</span>
                             <span class="tech">REST APIs</span>
                         </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.trinet.hrpmobile&hl=en_US" target="_blank">View on Play Store →</a>
                     </div>
                 </div>
 
@@ -924,6 +530,7 @@
                         <p class="role">Lead Developer</p>
                         <p>Internal automation suite enabling workflow orchestration and dashboards using low-code.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">web</span>
                             <span class="tech">Flutter</span>
                             <span class="tech">FlutterFlow</span>
                             <span class="tech">Firebase</span>
@@ -937,11 +544,13 @@
                         <p class="role">Technical Lead</p>
                         <p>News platform rewrite using Compose + MVVM with optimized rendering and caching.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Kotlin</span>
                             <span class="tech">Compose</span>
                             <span class="tech">Room</span>
                             <span class="tech">Retrofit</span>
                         </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.buuuk.st&pcampaignid=web_share" target="_blank">View on Play Store →</a>
                     </div>
                 </div>
                  <div class="portfolio-card">
@@ -950,6 +559,7 @@
                         <p class="role">Full-Stack Developer</p>
                         <p>Developed a custom website and a comprehensive management portal with modules for vendors, billing, warehouse, investors, and budget planning. Also built and released the companion Android app from start to finish.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">web mobile</span>
                             <span class="tech">React</span>
                             <span class="tech">Firebase</span>
                             <span class="tech">Supabase</span>
@@ -966,6 +576,7 @@
                         <p class="role">Full-Stack Developer</p>
                         <p>A complete fleet management solution to manage fleet business, trips, fuel, cost, billing, drivers, vehicles, funds, and employees. I handled the end-to-end setup, from development to domain release.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">web</span>
                             <span class="tech">React.js</span>
                             <span class="tech">Next.js</span>
                             <span class="tech">Vercel</span>
@@ -982,6 +593,7 @@
                         <p class="role">Android Developer</p>
                         <p>A free marketplace that gives users a platform to share and borrow their household items with their neighbors, and in return get access to huge discounts from their favorite brands and big box stores.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                             <span class="tech">REST APIs</span>
@@ -996,6 +608,7 @@
                         <p class="role">Android Developer</p>
                         <p>Provides medical benefits & hospitalization cover of Rs. 2 Lakh to senior citizens in Pune. Beneficiaries can register, receive payment receipts, access terms & conditions, get notifications, and share via social media.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                             <span class="tech">Firebase</span>
@@ -1010,6 +623,7 @@
                         <p class="role">Android Developer</p>
                         <p>A comprehensive file management application for Android devices, enabling efficient file browsing, organization, and management.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                         </div>
@@ -1023,6 +637,7 @@
                         <p class="role">Lead Developer</p>
                         <p>A state-of-the-art tool for healthcare professionals that uses integrated patient data to suggest treatment options from the ESC Clinical Practice Guidelines on Atrial Fibrillation.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                             <span class="tech">Clinical Algorithms</span>
@@ -1036,6 +651,7 @@
                         <p class="role">Android Developer</p>
                         <p>An interactive version of the STIKO (Standing Committee on Vaccination) recommendations and other useful information around vaccination can be found in a single comprehensive app.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                             <span class="tech">Medical Content</span>
@@ -1050,6 +666,7 @@
                         <p class="role">Android Developer</p>
                         <p>A comprehensive pocket reference guide for ESC (European Society of Cardiology) clinical practice guidelines, providing quick access to evidence-based medical recommendations.</p>
                         <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
                             <span class="tech">Android SDK</span>
                             <span class="tech">Java</span>
                             <span class="tech">Medical Reference</span>
@@ -1057,11 +674,74 @@
                         <a href="https://play.google.com/store/apps/details?id=com.esccardio.escpocketguidelines" target="_blank">View on Play Store →</a>
                     </div>
                 </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>Universal Tennis</h3>
+                        <p class="role">Lead Developer</p>
+                        <p>The Universal Tennis marketplace connects players with level-based play, leagues, teams, and analytics to track and improve your game. End-to-end platform ownership with feature development and team leadership.</p>
+                        <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Android SDK</span>
+                            <span class="tech">Google Maps API</span>
+                            <span class="tech">Firebase</span>
+                            <span class="tech">Jetpack Compose</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.ut.utr" target="_blank">View on Play Store →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>One App (T-Systems)</h3>
+                        <p class="role">Lead Developer</p>
+                        <p>Internal demo application for T-Systems to access and showcase the Seamless SDK and other connected SDKs. Cloud-integrated architecture connecting IoT devices to Azure backend.</p>
+                        <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile backend devops</span>
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Android SDK</span>
+                            <span class="tech">Dagger Hilt</span>
+                            <span class="tech">Azure Backend</span>
+                            <span class="tech">TLS 1.3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>MyBpost</h3>
+                        <p class="role">Solution Designer</p>
+                        <p>The most complete track & trace app for smartphones. Comprehensive solution for Australian Post with architecture design, system design reviews, and enterprise-grade release management.</p>
+                        <div class="tech-stack">
+                            <span class="tech" style="display:none;">mobile</span>
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Xamarin Native</span>
+                            <span class="tech">Android SDK</span>
+                            <span class="tech">REST APIs</span>
+                            <span class="tech">Clean Architecture</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=be.bpost.mybpost&hl=en_IN" target="_blank">View on Play Store →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
+    <!-- Portfolio modal (single instance) -->
+    <div id="portfolio-modal" class="portfolio-modal" aria-hidden="true">
+        <div class="portfolio-modal-backdrop"></div>
+        <div class="portfolio-modal-content">
+            <button class="modal-close" aria-label="Close">×</button>
+            <h3 class="modal-title"></h3>
+            <p class="modal-role"></p>
+            <div class="modal-body"></div>
+            <div class="modal-techs"></div>
+            <div class="modal-actions"><a class="modal-link" target="_blank">View on Play Store →</a></div>
+        </div>
+    </div>
+
     <section id="contact">
         <div class="container">
             <h2>Get In Touch</h2>
@@ -1094,18 +774,11 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <!-- Module Scripts -->
+    <script src="js/modules/utilities.js"></script>
+    <script src="js/modules/smooth-scroll.js"></script>
+    <script src="js/modules/navbar.js"></script>
+    <script src="js/modules/portfolio.js"></script>
 </body>
 
 </html>

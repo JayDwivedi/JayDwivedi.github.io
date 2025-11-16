@@ -1,0 +1,41 @@
+/* About Section */
+#about {
+    background: var(--light-color);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    line-height: 1.8;
+}
+
+/* Profile Info */
+.profile-info {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-info-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.profile-info-item:last-child {
+    border-bottom: none;
+}
+
+.profile-info-item strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}

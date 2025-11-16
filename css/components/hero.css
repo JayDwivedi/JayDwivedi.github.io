@@ -1,0 +1,104 @@
+/* Contact info styling for hero section */
+/* Hero contact info styling */
+.hero-contact-item {
+    color: #fff;
+    background: rgba(0,0,0,0.18);
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+}
+.hero-contact-item i {
+    margin-right: 0.7rem;
+    font-size: 1.3em;
+.hero-contact-item:hover {
+    background: #fff;
+    color: #BD5D38;
+}
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(120deg, #BD5D38 0%, #232526 100%);
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(34, 34, 34, 0.12);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero .title {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.hero .social-links {
+    margin-top: 2rem;
+}
+
+.hero .social-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(0,0,0,0.18);
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 10px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+}
+
+.hero .social-links a:hover {
+    background: #fff;
+    color: #BD5D38;
+    transform: translateY(-5px);
+}
+
+/* Resume Button */
+.resume-btn {
+    display: inline-block;
+    background: #fff;
+    color: #BD5D38;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 10px;
+    transition: background 0.2s, color 0.2s;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+}
+
+.resume-btn:hover {
+    background: #BD5D38;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero .resume-btn {
+    color: #BD5D38;
+    background: #fff;
+}
+
+.hero .resume-btn:hover {
+    background: #BD5D38;
+    color: #fff;
+    border-color: #BD5D38;
+}

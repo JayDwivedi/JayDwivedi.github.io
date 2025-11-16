@@ -1,0 +1,26 @@
+/* Navigation */
+nav {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white !important;
+}
+
+nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-left: 1.5rem;
+    transition: 0.3s ease;
+}
+
+nav .nav-link:hover {
+    color: white !important;
+    border-bottom: 2px solid white;
+}
