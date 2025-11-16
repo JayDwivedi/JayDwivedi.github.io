@@ -2,688 +2,881 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mobile Architect and Lead Android Developer with 11+ years of experience delivering enterprise-grade mobile ecosystems. Expert in Kotlin, Jetpack Compose, React Native, Flutter, and full-stack development.">
     <meta name="author" content="Jay Kishor Dwivedi">
-
     <title>Jay Kishor Dwivedi - Mobile Architect & Lead Android Developer</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-          rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- mobile specific metas
-     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
 
-    <!-- CSS
-     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendor.css">
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Saira', sans-serif;
+            font-weight: 700;
+        }
 
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
+        nav .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white !important;
+        }
 
+        nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin-left: 1.5rem;
+            transition: 0.3s ease;
+        }
+
+        nav .nav-link:hover {
+            color: white !important;
+            border-bottom: 2px solid white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero .social-links {
+            margin-top: 2rem;
+        }
+
+        .hero .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            margin: 0 10px;
+            transition: 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .hero .social-links a:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Resume Button */
+        .resume-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .resume-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .resume-btn {
+            color: var(--primary-color);
+            background: white;
+        }
+
+        .hero .resume-btn:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto 0;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--light-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            line-height: 1.8;
+        }
+
+        /* Profile Info */
+        .profile-info {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-info-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-color);
+        }
+
+        .profile-info-item:last-child {
+            border-bottom: none;
+        }
+
+        .profile-info-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: white;
+        }
+
+        .skill-card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: white;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid var(--primary-color);
+            font-size: 0.9rem;
+            transition: 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Experience Section */
+        #experience {
+            background: var(--light-color);
+        }
+
+        .experience-item {
+            background: white;
+            padding: 30px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-item .company {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+        }
+
+        .experience-item li {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            line-height: 1.7;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .portfolio-card {
+            background: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-card-content {
+            padding: 25px;
+        }
+
+        .portfolio-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .portfolio-card .role {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card p {
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .portfolio-card .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .portfolio-card .tech {
+            background: white;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid var(--primary-color);
+        }
+
+        .portfolio-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .portfolio-card a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Education Section */
+        #education {
+            background: var(--light-color);
+        }
+
+        .education-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .education-item .degree {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .education-item .date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        #contact h2::after {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-item {
+            margin: 30px 0;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .title {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+        }
+    </style>
 </head>
 
-<body id="page-top">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Jay Dwivedi</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png"
-               alt="Jay Kishor Dwivedi">
-        </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#profilesummary">Profile Summary</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#blog">Blogs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#my_services">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact me</a>
-            </li>
-
-        </ul>
-    </div>
-</nav>
-
-<div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-            <h1 class="mb-0">Jay Kishor
-                <span class="text-primary">Dwivedi</span>
-            </h1>
-            <div class="subheading mb-5">Hyderabad, India · (+91) 8600227438 ·
-                <a href="mailto:jaidwivedi20@gmail.com">jaidwivedi20@gmail.com</a>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#top">Jay Dwivedi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <p class="mb-5">Mobile Architect and Lead Android Developer with 11+ years of experience delivering enterprise-grade mobile ecosystems across HR, finance, telecom, and productivity domains. Expert in Kotlin, Jetpack Compose, and cross-platform strategy (React Native, Flutter). Known for modernizing large-scale apps, designing clean architectures, leading distributed teams, and driving AI-assisted development with automation-first engineering practices. Strong record in shipping robust, scalable, and secure mobile solutions with CI/CD, cloud integrations, and cross-functional collaboration.</p>
-            <ul class="list-inline list-social-icons mb-0">
-                <li class="list-inline-item">
-                    <a href="https://linkedin.com/in/jaydwivedi">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://github.com/jaydwivedi">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://jaydwivedi.github.io">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i>
-                </span>
-                    </a>
-                </li>
-            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="container">
+            <h1>Jay Kishor Dwivedi</h1>
+            <p class="title">Mobile Architect | Lead Android Developer</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/jaydwivedi" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/jaydwivedi" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                <a href="mailto:jaidwivedi20@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="Jay_Kishor_Dwivedi_Resume.pdf" class="resume-btn" download><i class="fa fa-download"></i> Download Resume</a>
+                <a href="Jay_Kishor_Dwivedi_Resume.pdf" class="resume-btn" target="_blank"><i class="fa fa-eye"></i> View Resume</a>
+            </div>
         </div>
     </section>
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="profilesummary">
-        <div class="my-auto">
-            <h2 class="mb-5">Expertise</h2>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
 
-                    <ul class="fa-ul mb-0">
-                        <li><i class="fa-li fa fa-check"></i>Architecture & Solution Design</li>
-                        <li><i class="fa-li fa fa-check"></i>Mobile Platform Modernization</li>
-                        <li><i class="fa-li fa fa-check"></i>Team Leadership & Technical Mentoring</li>
-                        <li><i class="fa-li fa fa-check"></i>Cross-Platform Strategy (RN/Flutter)</li>
-                        <li><i class="fa-li fa fa-check"></i>Clean Architecture, MVVM, MVI</li>
-                        <li><i class="fa-li fa fa-check"></i>Performance Optimization</li>
-                        <li><i class="fa-li fa fa-check"></i>AI-assisted Development & Automation</li>
-                        <li><i class="fa-li fa fa-check"></i>CI/CD (Jenkins, Bitrise)</li>
-                        <li><i class="fa-li fa fa-check"></i>Scalable Mobile Systems</li>
-                        <li><i class="fa-li fa fa-check"></i>Code Quality & Review Leadership</li>
-                        <li><i class="fa-li fa fa-check"></i>R&D and Innovation Initiatives</li>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Let me introduce myself</h2>
+            <div class="about-content">
+                <div>
+                    <p>Mobile Architect and Lead Android Developer with 11+ years of experience delivering enterprise-grade mobile ecosystems across HR, finance, telecom, and productivity domains.</p>
+                    <p>Expert in Kotlin, Jetpack Compose, and cross-platform strategy (React Native, Flutter). Known for modernizing large-scale apps, designing clean architectures, leading distributed teams, and driving AI-assisted development with automation-first engineering practices.</p>
+                    <p>Strong record in shipping robust, scalable, and secure mobile solutions with CI/CD, cloud integrations, and cross-functional collaboration.</p>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-info-item">
+                        <strong>Full Name</strong>
+                        Jay Kishor Dwivedi
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Current Position</strong>
+                        Sr. Technical Lead / Mobile Architect at Coforge Limited
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Location</strong>
+                        Hyderabad, India
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Email</strong>
+                        jaidwivedi20@gmail.com
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Phone</strong>
+                        +91 8600227438
+                    </div>
+                    <div class="profile-info-item" style="border-bottom: none; margin-top: 25px; text-align: center;">
+                        <a href="Jay_Kishor_Dwivedi_Resume.pdf" class="resume-btn" download style="display: block; margin: 10px 0;"><i class="fa fa-download"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills & Expertise</h2>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="skill-card">
+                        <h4>Languages</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Mobile Development</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Android SDK</span>
+                            <span class="skill-tag">Jetpack Compose</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Expo</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Architecture & Design</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">MVI</span>
+                            <span class="skill-tag">Dagger Hilt</span>
+                            <span class="skill-tag">Modularization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="skill-card">
+                        <h4>Backend & Data</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Room</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">Supabase</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>DevOps & Tools</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Bitrise</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Cloud & AI</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Firebase Suite</span>
+                            <span class="skill-tag">Google APIs</span>
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Claude</span>
+                            <span class="skill-tag">Gemini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>My Work Experience</h2>
+            <div class="mt-5">
+                <div class="experience-item">
+                    <h3>Sr. Technical Lead / Mobile Architect</h3>
+                    <p class="company">Coforge Limited</p>
+                    <p class="date">Jan 2024 - Present</p>
+                    <ul>
+                        <li>Architecting and leading development of HCM (Zenefits) Android app using Kotlin, Compose, and modular architecture.</li>
+                        <li>Contributed to TriNet HR Platform using React Native + Expo, improving build speed and cross-platform component reuse.</li>
+                        <li>Designed FCM-based push notification system for YourPeople3 backend using Python.</li>
+                        <li>Delivered banking dashboard and configurator tools using Flutter and FlutterFlow, accelerating delivery via low-code.</li>
+                        <li>Introduced AI-assisted development workflows with multi-agent automation to reduce engineering effort.</li>
                     </ul>
-
                 </div>
 
-            </div>
+                <div class="experience-item">
+                    <h3>Sr. Android Developer</h3>
+                    <p class="company">Nityo Technology</p>
+                    <p class="date">Mar 2023 - Dec 2023</p>
+                    <ul>
+                        <li>Delivered major modules for The Straits Times Android app using Compose and MVVM.</li>
+                        <li>Implemented performance-focused caching and news rendering pipeline.</li>
+                        <li>Led architecture reviews and cross-team technical discussions.</li>
+                    </ul>
+                </div>
 
+                <div class="experience-item">
+                    <h3>Lead Android Developer</h3>
+                    <p class="company">Riktam Technology</p>
+                    <p class="date">Jul 2022 - Feb 2023</p>
+                    <ul>
+                        <li>Led Universal Tennis mobile platform with end-to-end feature ownership.</li>
+                        <li>Managed CI/CD pipelines (Jenkins) and code review automation.</li>
+                        <li>Integrated Google Maps, analytics, and real-time tournament services.</li>
+                    </ul>
+                </div>
 
-        </div>
+                <div class="experience-item">
+                    <h3>Lead Android Developer</h3>
+                    <p class="company">T-Systems ICT</p>
+                    <p class="date">Jun 2021 - Jul 2022</p>
+                    <ul>
+                        <li>Delivered Mesh Setup App and One App with cloud-integrated architecture.</li>
+                        <li>Managed release cycles and GitOps workflows for multi-team collaboration.</li>
+                    </ul>
+                </div>
 
-    </section>
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-            <h2 class="mb-5">Experience</h2>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Sr. Technical Lead / Mobile Architect</h3>
-                    <div class="subheading mb-3">Coforge Limited</div>
-                    <p>
-                        <ul>
-                            <li>Architecting and leading development of HCM (Zenefits) Android app using Kotlin, Compose, and modular architecture.</li>
-                            <li>Contributed to TriNet HR Platform using React Native + Expo, improving build speed and cross-platform component reuse.</li>
-                            <li>Designed FCM-based push notification system for YourPeople3 backend using Python.</li>
-                            <li>Delivered banking dashboard and configurator tools using Flutter and FlutterFlow, accelerating delivery via low-code.</li>
-                            <li>Introduced AI-assisted development workflows with multi-agent automation to reduce engineering effort.</li>
-                            <li>Led sprint planning, architecture discussions, and code quality governance across distributed teams.</li>
-                            <li>Defined branching strategy, CI/CD pipelines, and automated quality gates using GitHub + Jenkins.</li>
-                        </ul>
-                    </p>
+                <div class="experience-item">
+                    <h3>Lead Android Developer / Solution Designer</h3>
+                    <p class="company">Tata Consultancy Services</p>
+                    <p class="date">Aug 2018 - Jun 2021</p>
+                    <ul>
+                        <li>Served as solution designer for Mybpost app, owning architecture and release sign-off.</li>
+                        <li>Part of TCS DI Architecture Group; responsible for technical design reviews and POCs.</li>
+                    </ul>
                 </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jan 2024 - Present</span>
-                </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Sr. Android Developer</h3>
-                    <div class="subheading mb-3">Nityo Technology</div>
-                    <p>
-                        <ul>
-                            <li>Delivered major modules for The Straits Times Android app using Compose and MVVM.</li>
-                            <li>Implemented performance-focused caching and news rendering pipeline.</li>
-                            <li>Led architecture reviews and cross-team technical discussions.</li>
-                            <li>Managed Jira workflow, Git merges, and CI/CD improvements for faster release cycles.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Mar 2023 - Dec 2023</span>
-                </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Lead Android Developer</h3>
-                    <div class="subheading mb-3">Riktam Technology</div>
-                    <p>
-                        <ul>
-                            <li>Led Universal Tennis mobile platform with end-to-end feature ownership.</li>
-                            <li>Managed CI/CD pipelines (Jenkins) and code review automation.</li>
-                            <li>Integrated Google Maps, analytics, and real-time tournament services.</li>
-                            <li>Mentored team on Compose migration and architecture best practices.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jul 2022 - Feb 2023</span>
-                </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Lead Android Developer</h3>
-                    <div class="subheading mb-3">T-Systems ICT</div>
-                    <p>
-                        <ul>
-                            <li>Delivered Mesh Setup App and One App with cloud-integrated architecture.</li>
-                            <li>Managed release cycles and GitOps workflows for multi-team collaboration.</li>
-                            <li>Built SDK demos and internal tooling to accelerate feature delivery.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Jun 2021 - Jul 2022</span>
-                </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Lead Android Developer / Solution Designer</h3>
-                    <div class="subheading mb-3">Tata Consultancy Services</div>
-                    <p>
-                        <ul>
-                            <li>Served as solution designer for Mybpost app, owning architecture and release sign-off.</li>
-                            <li>Part of TCS DI Architecture Group; responsible for technical design reviews and POCs.</li>
-                            <li>Led DevOps automation initiatives improving reliability and deployment turnaround.</li>
-                            <li>Designed scalable modules, managed Jira sprints, and mentored developers.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Aug 2018 - Jun 2021</span>
-                </div>
-            </div>
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Sr. Android Developer</h3>
-                    <div class="subheading mb-3">Borm Bruckmeier InfoTech</div>
-                    <p>
-                        <ul>
-                            <li>Developed medical reference and interactive algorithm apps with high accuracy requirements.</li>
-                            <li>Built Java desktop tool enabling non-technical medical editors to design clinical calculators.</li>
-                            <li>Maintained compatibility across Android versions; led UI/UX modernization efforts.</li>
-                            <li>Handled end-to-end releases and documentation.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Feb 2014 - Jul 2018</span>
+
+                <div class="experience-item">
+                    <h3>Sr. Android Developer</h3>
+                    <p class="company">Borm Bruckmeier InfoTech</p>
+                    <p class="date">Feb 2014 - Jul 2018</p>
+                    <ul>
+                        <li>Developed medical reference and interactive algorithm apps with high accuracy requirements.</li>
+                        <li>Built Java desktop tool enabling non-technical medical editors to design clinical calculators.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-            <h2 class="mb-5">Education</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">IPS Academy, Indore</h3>
-                    <div class="subheading mb-3">MCA – Master of Computer Applications</div>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>My Education</h2>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="education-item">
+                        <h4>IPS Academy, Indore</h4>
+                        <p class="degree">MCA – Master of Computer Applications</p>
+                        <p class="date">2011 - 2014</p>
+                    </div>
                 </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2011 - 2014</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Dr. VSICS, Kanpur</h3>
-                    <div class="subheading mb-3">BCA – Bachelor of Computer Applications</div>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">2008 - 2011</span>
+                <div class="col-lg-6">
+                    <div class="education-item">
+                        <h4>Dr. VSICS, Kanpur</h4>
+                        <p class="degree">BCA – Bachelor of Computer Applications</p>
+                        <p class="date">2008 - 2011</p>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-            <h2 class="mb-5">Skills</h2>
-
-            <div class="subheading mb-3">Languages</div>
-            <p>Kotlin, Java, JavaScript, TypeScript, Python (Basic), Dart (Basic)</p>
-
-            <div class="subheading mb-3">Mobile Development</div>
-            <p>Android SDK, Jetpack Compose, React Native, Flutter, FlutterFlow, Expo, Xamarin Native</p>
-
-            <div class="subheading mb-3">Architecture & Design</div>
-            <p>Clean Architecture, MVVM, MVI, Dagger Hilt, Koin, Modularization, Dependency Injection</p>
-
-            <div class="subheading mb-3">Backend & Data</div>
-            <p>Room, SQLite, Supabase, PostgreSQL, GraphQL, REST APIs, Retrofit, Coroutines, RxJava</p>
-
-            <div class="subheading mb-3">DevOps & Tools</div>
-            <p>Jenkins, Bitrise, GitHub/Bitbucket, Jira, SonarQube, Firebase Crashlytics, FCM, AWS Monitoring, GitHub Copilot</p>
-
-            <div class="subheading mb-3">Testing & Quality</div>
-            <p>Unit Testing, JUnit, Mockito, Test Automation, Code Review, CI Testing Pipelines</p>
-
-            <div class="subheading mb-3">Cloud & AI</div>
-            <p>Firebase Suite, Google APIs, AI Tools: ChatGPT, Claude, Gemini, GitHub Copilot, Multi-agent Orchestration</p>
-
-            <div class="subheading mb-3">Additional Technologies</div>
-            <p>WebRTC, TensorFlow Lite, Google Maps, Vision APIs, JSON/XML</p>
-        </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-            <h2 class="mb-5">Interests</h2>
-            <p>Apart from being a Android developer, I enjoy most of my time being research.</p>
-            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre
-                movies and television shows, I am an aspiring chef, and I spend a large amount of my
-                free time exploring the latest technolgy advancements in the Mobile app development
-                world.</p>
-        </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-            <h2 class="mb-5">Awards &amp; Certifications</h2>
-            <ul class="fa-ul mb-0">
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                Digital Mobile Computing: Android Foundation</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                Agile Way of Working Foundation</li>
-              <li>
-                <i class="fa-li fa fa-trophy text-warning"></i>
-                Adobe AEP Qualification</li>
-            </ul>
-        </div>
-    </section>
-    <!-- Portfolio Section
-       ================================================== -->
-
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
-
-        <div class="my-auto">
-            <div class="col-twelve">
-                <h2 class="mb-5">Projects</h2>
-                <p class="lead">Check Out Some of My Works.</p>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3 style="margin-top: 40px; margin-bottom: 30px; color: var(--primary-color);">Certifications</h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-tag">Digital Mobile Computing: Android Foundation</span>
+                        <span class="skill-tag">Agile Way of Working Foundation</span>
+                        <span class="skill-tag">Adobe AEP Qualification</span>
+                    </div>
+                </div>
             </div>
-        </div> <!-- /section-intro-->
+        </div>
+    </section>
 
-        <div class="row portfolio-content">
-            <div class="col-twelve">
-                <!-- portfolio-wrapper -->
-                <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <a href="https://www.jstmservices.co.in/" target="_blank" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">JSTMServices</h3>
-                                        <span class="folio-types">
-                                            Developed a custom website and a comprehensive management portal with modules for vendors, billing, warehouse, investors, and budget planning. Also built and released the companion Android app from start to finish.
-                                            <br>
-                                            <b>Web Tech:</b> React, Firebase, Supabase, PostgreSQL
-                                            <br>
-                                            <b>Android Tech:</b> Kotlin, Jetpack Compose, Coroutines
-                                            <br>
-                                            <a href="https://play.google.com/store/apps/details?id=com.jstm.transporterapp&pcampaignid=web_share" target="_blank">View Android App</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Portfolio Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>JSTMServices</h3>
+                        <p class="role">Full-Stack Developer</p>
+                        <p>Developed a custom website and a comprehensive management portal with modules for vendors, billing, warehouse, investors, and budget planning. Also built and released the companion Android app from start to finish.</p>
+                        <div class="tech-stack">
+                            <span class="tech">React</span>
+                            <span class="tech">Firebase</span>
+                            <span class="tech">Supabase</span>
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Compose</span>
+                        </div>
+                        <a href="https://www.jstmservices.co.in/" target="_blank">View Website →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>Surefleet</h3>
+                        <p class="role">Full-Stack Developer</p>
+                        <p>A complete fleet management solution to manage fleet business, trips, fuel, cost, billing, drivers, vehicles, funds, and employees. I handled the end-to-end setup, from development to domain release.</p>
+                        <div class="tech-stack">
+                            <span class="tech">React.js</span>
+                            <span class="tech">Next.js</span>
+                            <span class="tech">Vercel</span>
+                            <span class="tech">Supabase</span>
+                            <span class="tech">PostgreSQL</span>
+                        </div>
+                        <a href="https://www.surefleet.in/" target="_blank">View Website →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>HCM (Zenefits)</h3>
+                        <p class="role">Mobile Architect</p>
+                        <p>Large-scale HR app modernization using Compose, modularization, and backend push notification redesign using Python.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Compose</span>
+                            <span class="tech">Python</span>
+                            <span class="tech">FCM</span>
                         </div>
                     </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <a href="https://www.surefleet.in/" target="_blank" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">Surefleet</h3>
-                                        <span class="folio-types">
-                                            A complete fleet management solution to manage fleet business, trips, fuel, cost, billing, drivers, vehicles, funds, and employees. I handled the end-to-end setup, from development to domain release.
-                                            <br>
-                                            <b>Technologies:</b> React.js, Next.js, Vercel, Supabase, GitHub, PostgreSQL
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>TriNet HR App</h3>
+                        <p class="role">Sr. Developer</p>
+                        <p>Cross-platform HR solution with reusable React Native components and improved backend integration.</p>
+                        <div class="tech-stack">
+                            <span class="tech">React Native</span>
+                            <span class="tech">TypeScript</span>
+                            <span class="tech">Expo</span>
+                            <span class="tech">REST APIs</span>
                         </div>
                     </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <div class="folio-item-table">
-                                <div class="folio-item-cell">
-                                    <h3 class="folio-title">HCM (Zenefits)</h3>
-                                    <p><b>Role:</b> Mobile Architect</p>
-                                    <p>Large-scale HR app modernization using Compose, modularization, and backend push notification redesign using Python.</p>
-                                    <p><b>Technologies:</b> Kotlin, Compose, Python, FCM, Coroutines</p>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>Banking Dashboard Suite</h3>
+                        <p class="role">Lead Developer</p>
+                        <p>Internal automation suite enabling workflow orchestration and dashboards using low-code.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Flutter</span>
+                            <span class="tech">FlutterFlow</span>
+                            <span class="tech">Firebase</span>
                         </div>
                     </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <div class="folio-item-table">
-                                <div class="folio-item-cell">
-                                    <h3 class="folio-title">TriNet HR App</h3>
-                                    <p><b>Role:</b> Sr. Developer</p>
-                                    <p>Cross-platform HR solution with reusable React Native components and improved backend integration.</p>
-                                    <p><b>Technologies:</b> React Native, TypeScript, Expo, REST APIs</p>
-                                </div>
-                            </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-card-content">
+                        <h3>The Straits Times</h3>
+                        <p class="role">Technical Lead</p>
+                        <p>News platform rewrite using Compose + MVVM with optimized rendering and caching.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Compose</span>
+                            <span class="tech">Room</span>
+                            <span class="tech">Retrofit</span>
                         </div>
                     </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <div class="folio-item-table">
-                                <div class="folio-item-cell">
-                                    <h3 class="folio-title">Banking Dashboard Suite</h3>
-                                    <p><b>Role:</b> Lead Developer</p>
-                                    <p>Internal automation suite enabling workflow orchestration and dashboards using low-code.</p>
-                                    <p><b>Technologies:</b> Flutter, FlutterFlow, Firebase</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <div class="folio-item-table">
-                                <div class="folio-item-cell">
-                                    <h3 class="folio-title">The Straits Times</h3>
-                                    <p><b>Role:</b> Technical Lead</p>
-                                    <p>News platform rewrite using Compose + MVVM with optimized rendering and caching.</p>
-                                    <p><b>Technologies:</b> Kotlin, Compose, Room, Retrofit</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <img src="https://lh3.googleusercontent.com/qrjr_je1bN-K2nWaPpZCG8_ApzuJzLOQFs5DzPgD24JqcCjUXNjQK7pYQTDtqC5D7w=s180-rw"
-                                 alt="Lighthouse">
-                            <a href="https://play.google.com/store/apps/details?id=com.itideology.hereyagoApp"
-                               class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">HereYaGo App</h3>
-                                        <span class="folio-types">
-		     					       	 HereYaGo is essentially a free marketplace that gives users a platform to share and borrow their household items with their neighbors, and in return get access to huge discounts from their favorite brands and big box stores.
-		     					      </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <img src="https://lh3.googleusercontent.com/Qqy6EidyxMxQra_FDsmHkd6Pe7KdzzNjphbetEAtYvlXPBCdqV7IWoQB_6R7SVfUQB0=s180-rw"
-                                 alt="Lighthouse">
-                            <a href="https://play.google.com/store/apps/details?id=com.abell.s3k"
-                               class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">S3K</h3>
-                                        <span class="folio-types">
-		     					       	  Sakal Sahyadri Suraksha Kawach provides medical benefits & hospitalization cover of Rs. 2 Lakh to senior citizens in Pune. Using this application beneficiary can register by paying the fees. We have provided the online receipt of payment , beneficiary I card, Terms and condition booklet of Sakal Sahyadri Suraksha Kawach. Beneficiary will be getting notifications through the application about Sakal Sahyadri Suraksha Kawach. Beneficiary can share the application through social media .
-		     					      </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <img src="https://lh3.googleusercontent.com/8JD73b6JPwIdEli2slERt5JyMEgISdjDkBhQhHdW2wt-yCyFANPRGDT5AI7Grtw8qw=w300-rw"
-                                 alt="Lighthouse">
-                            <a href="https://play.google.com/store/apps/details?id=com.optibittechnologies.jay.filemanger"
-                               class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">File Manager</h3>
-                                        <span class="folio-types">
-		     					       	  The File Manager App
-		     					      </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div> <!-- /folio-item -->
-
-                    <!-- BormBruckMeier work-->
-
-
-
-                        <div class="folio-item">
-                            <div class="item-wrap">
-                                <img src="https://lh3.googleusercontent.com/-ltReyzofRUGCcAeMy0jO5hvA7IKG0XB1w-wleJYIksrXCpwu8lWNcTmZicibkmeZJ5y=w300-rw" alt="Liberty">
-                                <a href="#modal-01" class="overlay">
-                                    <div class="folio-item-table">
-                                        <div class="folio-item-cell">
-                                            <h3 class="folio-title">My AF</h3>
-                                            <span class="folio-types">
-		     					       	  An educational resource and tool for people with Atrial Fibrillation, that records symptoms and quality of life data, that can be shared with the healthcare team before each hospital visit.
-		     					       </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> <!-- /folio-item -->
-
-                        <div class="folio-item">
-                            <div class="item-wrap">
-                                <img src="https://lh3.googleusercontent.com/vPvMcdp1zQbozDDpieLRMbIjihKVKgjQvdmRoXPMPiQFqn32y5xjyYsKSyC3eiCufE1v=w300-rw" alt="Shutterbug">
-                                <a href="#modal-02" class="overlay">
-                                    <div class="folio-item-table">
-                                        <div class="folio-item-cell">
-                                            <h3 class="folio-title">AF Manager</h3>
-                                            <span class="folio-types">
-		     					       	  A state-of-the-art tool for healthcare professionals that uses integrated patient data to suggest treatment options from the ESC Clinical Practice Guidelines on Atrial Fibrillation.
-		     					      </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> <!-- /folio-item -->
-
-
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <img src="https://lh3.googleusercontent.com/ueJJiPDHARycr1482RTqaLwUEtsudL3p7ToWlVoKY9bJQVSPNnUZuSRzcBYqsPNxwQ=w300-rw"
-                                 alt="Stiko">
-                            <a href="https://play.google.com/store/apps/details?id=com.boerm.bruckmeier.robert_koch_institut_stiko"
-                               class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">Stiko</h3>
-                                        <span class="folio-types">
-		     					       	  An interactive version of the STIKO recommendations and other useful information around the seeding can now be found in a single app.
-		     					      </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div> <!-- /folio-item -->
-                    <div class="folio-item">
-                        <div class="item-wrap">
-                            <img src="https://lh3.googleusercontent.com/AtI5hfz0QJW1YCPgPMkqYsbSIgcA0CFC-as-skNlTGScUNUTncYLTlfuCrR2v8DyQOQ=w300-rw"
-                                 alt="Lighthouse">
-                            <a href="https://play.google.com/store/apps/details?id=com.esccardio.escpocketguidelines"
-                               class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">ESC Pocket Guidelines</h3>
-                                        <span class="folio-types">
-		     					       	  The ESC POCKET GUIDELINES App
-		     					      </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div> <!-- /folio-item -->
-                </div> <!-- /portfolio-wrapper -->
-            </div>  <!-- /twelve -->
-        </div> <!-- /portfolio-content -->
-    </section> <!-- /portfolio -->
-
-    <!-- Blogs Section
-   ================================================== -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="blog">
-
-        <div class="my-auto">
-
-            <div class="col-twelve" style="visibility: visible;">
-
-                <h2 class="mb-5">Blogs</h2>
-
-                <!-- <ul class="fa-ul mb-0">
-                   <li>
-                     <i class="fa-li fa fa-trophy text-warning"></i>
-                     <a href="https://medium.com/@chandilsachin/rxjava2-conditional-and-boolean-operators-57750d1bd90e">
-                       RxJava2: Conditional and Boolean Operators</a>
-                   </li>
-                   <li>
-                     <i class="fa-li fa fa-trophy text-warning"></i>
-                     <a href="https://android.jlelse.eu/rxjava2-concat-filter-cbe6d0686a81">
-                       RxJava2 : Concat + filter</a></li>
-                   <li>
-                     <i class="fa-li fa fa-trophy text-warning"></i>
-                     <a href="https://medium.com/@chandilsachin/room-with-unit-test-in-kotlin-4ad31a39a291">
-                       Room with Unit test in Kotlin</a></li>
-                 </ul>-->
-
-
+                </div>
             </div>
-
-        </div> <!-- /cta-content -->
-
-    </section> <!-- /cta -->
-
-    <!-- services Section
-       ================================================== -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="my_services">
-
-        <div class="my-auto">
-            <h2 class="mb-5">Services</h2>
-            <h3>What Can I Do For You?</h3>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <i class="fa-li fa fa-trophy text-warning"></i>
-                    Android Development
-                </li>
-
-
-            </ul>
         </div>
+    </section>
 
-
-    </section> <!-- /services -->
-
-
-    <!-- contact
-    ================================================== -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact"
-             style="background-color:white;">
-
-        <div class="my-auto">
-            <h2 class="mb-5">Contact</h2>
-
-            <ul class="fa-ul mb-0">
-                <li>
-
-                    <a href="email:chandilsachin@gmail.com">
-                        <div class="icon">
-                            <i class="icon-mail"></i>
-                        </div>
-
-                        <h5>Email Me At</h5>
-
-                        <p>jaidwivedi20@gmail.com<br>
-                        </p>
-                    </a></li>
-
-
-            </ul>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="mt-5">
+                <div class="contact-item">
+                    <h5>Email Me At</h5>
+                    <a href="mailto:jaidwivedi20@gmail.com">jaidwivedi20@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h5>Call/WhatsApp</h5>
+                    <a href="tel:+918600227438">+91 8600227438</a>
+                </div>
+                <div class="contact-item">
+                    <h5>Connect With Me</h5>
+                    <a href="https://linkedin.com/in/jaydwivedi" target="_blank" style="margin: 0 15px;">LinkedIn</a>
+                    <a href="https://github.com/jaydwivedi" target="_blank" style="margin: 0 15px;">GitHub</a>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jay Kishor Dwivedi. All rights reserved. | Built with passion for excellence.</p>
+        </div>
+    </footer>
 
-    </section> <!-- /contact -->
+    <!-- Bootstrap JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</div>
-
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="js/resume.min.js"></script>
-
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
