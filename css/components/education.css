@@ -1,0 +1,27 @@
+/* Education Section */
+#education {
+    background: var(--light-color);
+}
+
+.education-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.education-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.education-item .degree {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education-item .date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
